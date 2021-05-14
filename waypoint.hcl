@@ -1,4 +1,4 @@
-project = "nginx-project"
+project = "docker-static"
 
 # Labels can be specified for organizational purposes.
 # labels = { "foo" = "bar" }
