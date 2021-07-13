@@ -5,12 +5,23 @@ project = "docker-static"
 
 app "web" {
   build {
-    use "docker" {
+    use "docker" {}
+    registry {
+      use "docker" {
+        image = "docker-static"
+        tag   = "1"
+        local = true
+      }
     }
   }
 
   deploy {
-    use "docker" {
+    use "kubernetes" {
+      probe_path = "/"
     }
+  }
+
+  release {
+    use "kubernetes" {}
   }
 }
