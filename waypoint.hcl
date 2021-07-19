@@ -6,9 +6,7 @@ app "web" {
   }
 
   deploy {
-    use "kubernetes" {
-      probe_path = "/"
-    }
+    use "kubernetes" {}
   }
 
   release {
