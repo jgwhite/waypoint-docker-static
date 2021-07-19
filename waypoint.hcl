@@ -1,4 +1,4 @@
-project = "docker-static"
+project = "acmecorp"
 
 app "web" {
   build {
