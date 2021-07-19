@@ -3,13 +3,6 @@ project = "acmecorp"
 app "web" {
   build {
     use "docker" {}
-    registry {
-      use "docker" {
-        image = "docker-static"
-        tag   = "1"
-        local = true
-      }
-    }
   }
 
   deploy {
