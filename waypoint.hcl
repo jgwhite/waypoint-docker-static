@@ -1,4 +1,4 @@
-project = "acmecorp"
+project = "example"
 
 app "web" {
   build {
