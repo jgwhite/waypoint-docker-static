@@ -1,8 +1,8 @@
 project = "example"
 
 variable "docker_encoded_auth" {
-  type = string
-
+  type    = string
+  default = ""
 }
 
 app "web" {
