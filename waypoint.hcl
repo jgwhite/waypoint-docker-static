@@ -1,19 +1,26 @@
 project = "example"
 
+variables "docker_encoded_auth" {
+  type = string
+
+}
+
 app "web" {
   build {
     use "docker" {}
     registry {
       use "docker" {
-        image = "jgwhite/waypoint-example"
-        tag   = "latest"
-        local = true
+        image        = "jgwhite/waypoint-example"
+        tag          = "latest"
+        encoded_auth = var.docker_encoded_auth
       }
     }
   }
 
   deploy {
-    use "kubernetes" {}
+    use "kubernetes" {
+      image_secret = "waypoint_image_secret"
+    }
   }
 
   release {
