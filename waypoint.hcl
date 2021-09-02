@@ -1,5 +1,9 @@
 project = "example"
 
+variable "my_var" {
+  type = string
+}
+
 app "web" {
   build {
     use "docker" {}
