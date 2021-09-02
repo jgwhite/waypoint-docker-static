@@ -5,6 +5,10 @@ variable "docker_encoded_auth" {
   default = ""
 }
 
+runner {
+  enabled = true
+}
+
 app "web" {
   build {
     use "docker" {}
