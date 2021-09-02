@@ -1,6 +1,6 @@
 project = "example"
 
-variables "docker_encoded_auth" {
+variable "docker_encoded_auth" {
   type = string
 
 }
