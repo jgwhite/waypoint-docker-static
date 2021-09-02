@@ -19,7 +19,7 @@ app "web" {
 
   deploy {
     use "kubernetes" {
-      image_secret = "waypoint_image_secret"
+      image_secret = "waypoint-pull"
     }
   }
 
