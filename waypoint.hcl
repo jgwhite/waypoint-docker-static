@@ -6,7 +6,7 @@ app "web" {
     registry {
       use "docker" {
         image = "jgwhite/waypoint-example"
-        tag   = "latest"
+        tag   = "dev"
         local = true
       }
     }
