@@ -1,3 +1,6 @@
 {
-  "workbench.colorTheme": "Tomorrow Night"
+  "workbench.colorCustomizations": {
+    "statusBar.foreground": "#000",
+    "statusBar.background": "#FBBF24"
+  }
 }
