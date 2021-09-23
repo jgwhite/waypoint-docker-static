@@ -10,6 +10,10 @@ variable "docker_password" {
   default = ""
 }
 
+runner {
+  enabled = true
+}
+
 app "web" {
   build {
     use "docker" {}
