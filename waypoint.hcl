@@ -1,11 +1,6 @@
 project = "example"
 
-variable "docker_username" {
-  type    = string
-  default = ""
-}
-
-variable "docker_password" {
+variable "docker_auth" {
   type    = string
   default = ""
 }
@@ -19,10 +14,9 @@ app "web" {
     use "docker" {}
     registry {
       use "docker" {
-        image    = "jgwhite/waypoint-example"
-        tag      = "dev"
-        username = var.docker_username
-        password = var.docker_password
+        image        = "jgwhite/waypoint-example"
+        tag          = "dev"
+        encoded_auth = var.docker_auth
       }
     }
   }
