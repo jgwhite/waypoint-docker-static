@@ -24,6 +24,7 @@ app "web" {
         tag      = "dev"
         username = var.docker_username
         password = var.docker_password
+        local    = false
       }
     }
   }
