@@ -13,10 +13,6 @@ app "web" {
   }
 
   deploy {
-    use "kubernetes" {}
-  }
-
-  release {
-    use "kubernetes" {}
+    use "docker" {}
   }
 }
