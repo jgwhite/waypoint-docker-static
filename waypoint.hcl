@@ -16,10 +16,7 @@ runner {
 
 app "web" {
   build {
-    use "docker" {
-      buildkit = true
-      platform = "linux/arm64"
-    }
+    use "docker" {}
     registry {
       use "docker" {
         image = "jgwhite/waypoint-example"
