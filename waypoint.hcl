@@ -11,7 +11,9 @@ runner {
 
 app "web" {
   build {
-    use "docker" {}
+    use "docker" {
+      disable_entrypoint = true
+    }
     registry {
       use "docker" {
         image        = "jgwhite/waypoint-example"
