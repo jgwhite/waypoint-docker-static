@@ -10,21 +10,21 @@ variable "docker_password" {
   default = ""
 }
 
-
 runner {
   enabled = true
 }
 
 app "web" {
   build {
-    use "docker" {}
+    use "docker" {
+      buildkit = true
+      platform = "linux/arm64"
+    }
     registry {
       use "docker" {
-        image    = "jgwhite/waypoint-example"
-        tag      = "dev"
-        username = var.docker_username
-        password = var.docker_password
-        local    = false
+        image = "jgwhite/waypoint-example"
+        tag   = "dev"
+        local = true
       }
     }
   }
