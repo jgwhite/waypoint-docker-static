@@ -1,11 +1,11 @@
 project = "example"
 
-variable "docker_username" {
+variable "registry_username" {
   type    = string
   default = ""
 }
 
-variable "docker_password" {
+variable "registry_password" {
   type    = string
   default = ""
 }
@@ -21,11 +21,11 @@ app "web" {
     }
     registry {
       use "docker" {
-        image    = "index.docker.io/jgwhite/waypoint-example"
+        image    = "ghcr.io/jgwhite/waypoint-example"
         tag      = "dev"
         local    = false
-        username = var.docker_username
-        password = var.docker_password
+        username = var.registry_username
+        password = var.registry_password
       }
     }
   }
