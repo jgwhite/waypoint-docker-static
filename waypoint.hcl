@@ -21,7 +21,7 @@ app "web" {
     }
     registry {
       use "docker" {
-        image    = "docker.io/jgwhite/waypoint-example"
+        image    = "index.docker.io/jgwhite/waypoint-example"
         tag      = "dev"
         local    = false
         username = var.docker_username
