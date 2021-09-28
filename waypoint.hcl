@@ -16,7 +16,7 @@ app "web" {
     }
     registry {
       use "docker" {
-        image        = "jgwhite/waypoint-example"
+        image        = "docker.io/jgwhite/waypoint-example"
         tag          = "dev"
         local        = false
         encoded_auth = var.docker_encoded_auth
