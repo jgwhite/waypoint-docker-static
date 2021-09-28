@@ -1,6 +1,11 @@
 project = "example"
 
-variable "docker_encoded_auth" {
+variable "docker_username" {
+  type    = string
+  default = ""
+}
+
+variable "docker_password" {
   type    = string
   default = ""
 }
@@ -16,10 +21,11 @@ app "web" {
     }
     registry {
       use "docker" {
-        image        = "docker.io/jgwhite/waypoint-example"
-        tag          = "dev"
-        local        = false
-        encoded_auth = var.docker_encoded_auth
+        image    = "docker.io/jgwhite/waypoint-example"
+        tag      = "dev"
+        local    = false
+        username = var.docker_username
+        password = var.docker_password
       }
     }
   }
