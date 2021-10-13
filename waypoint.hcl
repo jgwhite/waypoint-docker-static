@@ -36,7 +36,7 @@ app "web" {
   release {
     use "kubernetes" {
       ingress "http" {
-        name = "www.smallwins.club"
+        host = "www.smallwins.club"
       }
     }
   }
