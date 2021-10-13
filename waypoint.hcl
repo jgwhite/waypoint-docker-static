@@ -37,9 +37,8 @@ app "web" {
     use "kubernetes" {
       ingress "http" {
         annotations = {
-          "kubernetes.io/ingress.class"                  = "nginx"
-          "cert-manager.io/issuer"                       = "letsencrypt-prod"
-          "nginx.ingress.kubernetes.io/backend-protocol" = "HTTPS"
+          "kubernetes.io/ingress.class" = "nginx"
+          "cert-manager.io/issuer"      = "letsencrypt-prod"
         }
         host = "www.smallwins.club"
         tls {
