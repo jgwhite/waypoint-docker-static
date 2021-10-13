@@ -40,6 +40,10 @@ app "web" {
           "kubernetes.io/ingress.class" = "nginx"
         }
         host = "www.smallwins.club"
+        tls {
+          hosts       = ["smallwins.club", "www.smallwins.club"]
+          secret_name = "www-smallwins-club-tls"
+        }
       }
     }
   }
