@@ -34,6 +34,10 @@ app "web" {
   }
 
   release {
-    use "kubernetes" {}
+    use "kubernetes" {
+      ingress "http" {
+        name = "www.smallwins.club"
+      }
+    }
   }
 }
