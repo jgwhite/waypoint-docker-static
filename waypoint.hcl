@@ -36,6 +36,9 @@ app "web" {
   release {
     use "kubernetes" {
       ingress "http" {
+        annotations = {
+          "kubernetes.io/ingress.class" = "nginx"
+        }
         host = "www.smallwins.club"
       }
     }
