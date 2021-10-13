@@ -42,7 +42,7 @@ app "web" {
         }
         host = "www.smallwins.club"
         tls {
-          hosts       = ["www.smallwins.club"]
+          hosts       = ["smallwins.club", "www.smallwins.club"]
           secret_name = "www-smallwins-club-tls"
         }
       }
