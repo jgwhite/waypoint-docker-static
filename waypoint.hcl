@@ -32,7 +32,15 @@ app "web" {
   }
 
   deploy {
-    use "kubernetes" {}
+    use "kubernetes" {
+      pod = {
+        container = {
+          probe = {
+            timeout = 120
+          }
+        }
+      }
+    }
   }
 
   release {
