@@ -18,14 +18,14 @@ app "web" {
   build {
     use "docker" {
       buildkit   = true
-      context    = "smallwins"
-      dockerfile = "smallwins/Dockerfile"
+      context    = "./smallwins/"
+      dockerfile = "./smallwins/Dockerfile"
     }
 
     registry {
       use "docker" {
         image    = "jgwhite/waypoint-example"
-        tag      = "1"
+        tag      = "dev"
         local    = false
         username = var.registry_username
         password = var.registry_password
