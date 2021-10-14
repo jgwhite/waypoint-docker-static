@@ -23,7 +23,7 @@ app "web" {
     registry {
       use "docker" {
         image    = "jgwhite/waypoint-example"
-        tag      = "dev"
+        tag      = gitrefpretty()
         local    = false
         username = var.registry_username
         password = var.registry_password
