@@ -18,7 +18,7 @@ app "web" {
   build {
     use "docker" {
       buildkit = true
-      context  = "./smallwins"
+      context  = "smallwins"
     }
 
     registry {
