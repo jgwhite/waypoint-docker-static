@@ -16,10 +16,7 @@ runner {
 
 app "web" {
   build {
-    use "docker" {
-      buildkit = true
-      context  = "smallwins"
-    }
+    use "pack" {}
 
     registry {
       use "docker" {
