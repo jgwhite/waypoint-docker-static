@@ -33,9 +33,9 @@ app "web" {
 
   deploy {
     use "kubernetes" {
-      pod = {
-        container = {
-          probe = {
+      pod {
+        container {
+          probe {
             timeout = 120
           }
         }
