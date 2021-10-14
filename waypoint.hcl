@@ -17,8 +17,9 @@ runner {
 app "web" {
   build {
     use "docker" {
-      buildkit = true
-      context  = "smallwins"
+      buildkit   = true
+      context    = "smallwins"
+      dockerfile = "smallwins/Dockerfile"
     }
 
     registry {
