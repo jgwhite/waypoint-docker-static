@@ -40,17 +40,6 @@ app "web" {
           "kubernetes.io/ingress.class" = "nginx"
           "cert-manager.io/issuer"      = "letsencrypt-prod"
         }
-        host = "www.smallwins.club"
-        tls {
-          hosts       = ["www.smallwins.club"]
-          secret_name = "www-smallwins-club-tls"
-        }
-      }
-      ingress "http" {
-        annotations = {
-          "kubernetes.io/ingress.class" = "nginx"
-          "cert-manager.io/issuer"      = "letsencrypt-prod"
-        }
         host = "smallwins.club"
         tls {
           hosts       = ["smallwins.club"]
